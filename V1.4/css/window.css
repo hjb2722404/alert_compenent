@@ -1,0 +1,97 @@
+@charset "utf-8";
+/*
+//author:hjb2722404
+//description:
+//date:2015/7/2
+*/
+
+/*skin for default*/
+.window_boundingBox{
+    position: fixed;
+    border: 1px solid #000;
+    width: 500px;
+    height:300px;
+    left: 50%;
+    margin-left: -250px;
+    top: 100px;
+    box-shadow: 0 0 12px rgba(0,0,0,.5);
+    background: #fff;
+}
+
+.window_footer input {
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.window_header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.window_body {
+    padding: 10px;
+}
+
+.window_closeBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 10px;
+    font-size: 20px;
+    background: blue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.window_mask {width: 100%; height: 100%; background: #000; opacity: 0.3; position: absolute; left: 0; top: 0;}
+
+/*skin for a*/
+
+.window_skin_a.window_boundingBox{
+    position: fixed;
+    border: 1px solid #000;
+    width: 500px;
+    height:300px;
+    left: 50%;
+    margin-left: -250px;
+    top: 100px;
+    box-shadow: 0 0 12px rgba(0,0,0,.5);
+}
+
+.window_skin_a .window_footer input {
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    right:40px;
+    left: auto;
+    margin-left: auto;
+}
+
+.window_skin_a .window_header {
+    background: red;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.window_skin_a .window_body {
+    padding: 10px;
+}
+
+.window_skin_a .window_closeBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 10px;
+    font-size: 20px;
+    background: #000000;
+    color: #fff;
+    cursor: pointer;
+}
