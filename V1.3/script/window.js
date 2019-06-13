@@ -43,6 +43,7 @@ define(['widget','jquery','jqueryUI'],function(widget,$,$UI){
                 CFG.handler && CFG.handler();
                 boundingBox.remove();
                 mask && mask.remove();
+                //触发alert事件
                 that.fire("alert");
             });
             boundingBox.css({
@@ -57,13 +58,16 @@ define(['widget','jquery','jqueryUI'],function(widget,$,$UI){
                 closeBtn.click(function(){
                     boundingBox.remove();
                     mask && mask.remove();
+                    //触发close事件
                     that.fire("close");
                 });
             }
             if(CFG.handler4AlertBtn){
+                //为alert事件设置监听
                 this.on("alert",CFG.handler4AlertBtn);
             }
             if(CFG.handler4CloseBtn){
+                //为close事件设置监听
                 this.on("close",CFG.handler4CloseBtn);
             }
             if(CFG.skinClassName){

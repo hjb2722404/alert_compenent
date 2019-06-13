@@ -3,6 +3,8 @@
  */
 
 define(['jquery'],function($){
+
+    // 使用构造函数生成Window类，并初始化配置项
     function Window(){
         this.cfg = {
             width:500,
@@ -12,8 +14,10 @@ define(['jquery'],function($){
         };
     }
 
+    //在 Window 类的原型上扩展方法
     Window.prototype = {
         alert : function(cfg){
+            //合并用户传入的配置项和默认的配置项
             var CFG = $.extend(this.cfg,cfg);
             var boundingBox = $('<div class="window_boundingBox"></div>');
             boundingBox.appendTo("body");
@@ -26,6 +30,7 @@ define(['jquery'],function($){
             });
 
             $.extend(this.cfg,cfg);
+            //根据配置项设置弹出层大小和位置
             boundingBox.css({
                 width:CFG.width + "px",
                 height:CFG.height + "px",

@@ -8,6 +8,7 @@ require.config({
 });
 require(['jquery','window'],function($,w){
     $("#a").click(function(){
+        //将弹出层距浏览器左边框的距离作为要显示的内容
         var left = window.innerWidth;
         new w.Window().alert({
                 content:left,

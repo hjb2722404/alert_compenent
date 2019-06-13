@@ -31,6 +31,7 @@ define(['jquery','jqueryUI'],function($,$UI){
                 ),
                 btn = boundingBox.find(".window_footer input");
                 mask = null;
+            //是否显示遮罩
             if(CFG.hasMask){
                 mask = $('<div class="window_mask"></div>');
                 mask.appendTo("body");
@@ -47,6 +48,7 @@ define(['jquery','jqueryUI'],function($,$UI){
                 left: (CFG.x || (window.innerWidth-CFG.width)/2)+ "px",
                 top:  (CFG.y || (window.innerHeight-CFG.height)/2)+ "px"
             });
+            //是否添加关闭按钮
             if(CFG.hasCloseBtn){
                 var closeBtn =$('<span class="window_closeBtn">X</span>');
                 closeBtn.appendTo(boundingBox);
@@ -55,10 +57,12 @@ define(['jquery','jqueryUI'],function($,$UI){
                     mask && mask.remove();
                 });
             }
+            //是否有皮肤
             if(CFG.skinClassName){
                 console.log("hasSkin");
                 boundingBox.addClass(CFG.skinClassName);
             }
+            //是否可拖拽
             if(CFG.isDraggable){
                 if(CFG.dragHandle){
                     boundingBox.draggable({handle:CFG.dragHandle});
